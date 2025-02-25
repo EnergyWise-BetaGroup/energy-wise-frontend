@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap');
+
+:root{
+    --primary-button: #036666;
+    --main-box: #78c6a3;
+    --background-dark: #99E2B4;
+    --background-light: #E4FFEE;
+    --dark-text: #000000;
+    --light-text: #FFFFFF;
+}
+
+body{
+    font-family: "AR One Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "ARRR" 10;
+    margin: 0px;
+}
+
+.header-lg{
+    height: 85px;
+    padding-top: 10px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.header-lg-text{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.header-sm{
+    padding-left: 12px;
+    height: 65px;
+    padding-top: 0px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.header-sm-text{
+    text-align: left;
+    font-size: 2rem;
+}
+
+.energy-span{
+    color: var(--background-dark)
+}
+
+.wise-span{
+    color: var(--primary-button)
+}
+
+main-background{
+    background: var(--background-dark)
+}
+
+.lg-button{
+    border-radius: 10px;
+    background: var(--primary-button);
+    color: var(--light-text);
+    font-size: large;
+    width: 130px;
+    height: 50px;
+    border: none;
+}
+
+.sm-button{
+    border-radius: 10px;
+    background: var(--primary-button);
+    color: var(--light-text);
+    font-size: medium;
+    min-width: 90px;
+    height: 30px;
+    border: none;
+}
