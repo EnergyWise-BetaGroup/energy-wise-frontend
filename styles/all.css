@@ -73,3 +73,29 @@ main-background{
     height: 30px;
     border: none;
 }
+
+.background-div{
+    background: linear-gradient(var(--background-dark), var(--background-light));
+    text-align: center;
+    border-radius: 0px 0px 50px 50px;
+    z-index: -1;
+}
+
+.background-image{
+    width: 350px;
+}
+
+@media screen and (min-width: 650px) {
+    .background-image{
+        width: unset;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .background-div{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2px;
+    }
+}
