@@ -19,7 +19,7 @@ body {
     align-items: center;
 }
 
-/* Top White Section */
+/* Top White Section
 .top-section {
     width: 100%;
     background-color: white;
@@ -28,7 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .top-section h1 {
     font-size: 30px;
@@ -54,8 +54,10 @@ body {
     justify-content: center;
     width: 100%;
     background: linear-gradient(var(--background-dark), var(--background-light));
+    
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
+    margin-left: -10px;
     padding: 10px 0;
     box-shadow: 0px 4px 0.5px rgba(0, 0, 0, 0.15);
 }
@@ -67,9 +69,10 @@ body {
 
 /* Registration Form Container */
 .form-container {
+    margin-left: 20px;
     background-color: var(--main-box);
     padding: 20px;
-    margin-top: 160px;
+    margin-top: 140px;
     border-radius: 15px;
     text-align: center;
     width: 80%;
@@ -86,11 +89,11 @@ h2 {
 /* Input Fields */
 input {
     width: 85%;
-    padding: 12px;
+    padding: 10px;
     margin: 10px 0;
     border-radius: 8px;
     border: none;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
     background-color: #f5f5f5;
 }
