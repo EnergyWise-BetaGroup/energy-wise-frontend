@@ -50,10 +50,6 @@ body{
     color: var(--primary-button)
 }
 
-main-background{
-    background: var(--background-dark)
-}
-
 .lg-button{
     border-radius: 10px;
     background: var(--primary-button);
@@ -106,12 +102,39 @@ main-background{
     bottom: 0px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     background-color: var(--primary-button);
 }
 
 .nav-bottom a:hover, a:active, a:link, a:visited{
     text-decoration: none;
     color: var(--light-text);
+}
+
+.nav-bottom a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bottom div{
+    width: 70px;
+    padding: 4px;
+}
+
+.nav-bottom div:nth-child(odd){
+    background-color: var(--primary-button);
+}
+
+.nav-bottom div:nth-child(even){
+    background-color: var(--background-dark);
+}
+
+.nav-bottom img{
+    width: 40px;
+    height: 40px;
+}
+
+.nav-bottom p{
+    margin: 0px;
 }
