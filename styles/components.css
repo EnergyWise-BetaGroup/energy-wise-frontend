@@ -50,10 +50,6 @@ body{
     color: var(--primary-button)
 }
 
-main-background{
-    background: var(--background-dark)
-}
-
 .lg-button{
     border-radius: 10px;
     background: var(--primary-button);
@@ -106,12 +102,59 @@ main-background{
     bottom: 0px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding-bottom: 10px;
-    background-color: var(--primary-button);
+    margin-bottom: 2px;
 }
 
 .nav-bottom a:hover, a:active, a:link, a:visited{
     text-decoration: none;
     color: var(--light-text);
+}
+
+.nav-bottom a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bottom div{
+    width: 60px;
+    padding: 4px;
+}
+
+.nav-bottom div:nth-child(odd){
+    background-color: var(--primary-button);
+}
+
+.nav-bottom div:nth-child(even){
+    background-color: var(--background-dark);
+}
+
+.nav-bottom img{
+    width: 30px;
+    height: 30px;
+}
+
+.nav-bottom p{
+    margin: 0px;
+}
+
+.nav-bottom div:first-child{
+    border-radius: 10px 0px 0px 10px;
+}
+.nav-bottom div:last-child{
+    border-radius: 0px 10px 10px 0px;
+}
+
+@media screen and (min-width: 500px) {
+    .nav-bottom{
+        bottom: 5px;
+    }
+    .nav-bottom img{
+        width: 40px;
+        height: 40px;
+    }
+    .nav-bottom div{
+        width: 70px;
+        padding: 4px;
+    }
 }
