@@ -102,8 +102,7 @@ body{
     bottom: 0px;
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-    background-color: var(--primary-button);
+    margin-bottom: 2px;
 }
 
 .nav-bottom a:hover, a:active, a:link, a:visited{
@@ -118,7 +117,7 @@ body{
 }
 
 .nav-bottom div{
-    width: 70px;
+    width: 60px;
     padding: 4px;
 }
 
@@ -131,10 +130,31 @@ body{
 }
 
 .nav-bottom img{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .nav-bottom p{
     margin: 0px;
+}
+
+.nav-bottom div:first-child{
+    border-radius: 10px 0px 0px 10px;
+}
+.nav-bottom div:last-child{
+    border-radius: 0px 10px 10px 0px;
+}
+
+@media screen and (min-width: 500px) {
+    .nav-bottom{
+        bottom: 5px;
+    }
+    .nav-bottom img{
+        width: 40px;
+        height: 40px;
+    }
+    .nav-bottom div{
+        width: 70px;
+        padding: 4px;
+    }
 }
