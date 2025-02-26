@@ -78,7 +78,6 @@ main-background{
     background: linear-gradient(var(--background-dark), var(--background-light));
     text-align: center;
     border-radius: 0px 0px 50px 50px;
-    z-index: -1;
 }
 
 .background-image{
@@ -98,4 +97,21 @@ main-background{
         margin-right: auto;
         margin-top: 2px;
     }
+}
+
+.nav-bottom{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    background-color: var(--primary-button);
+}
+
+.nav-bottom a:hover, a:active, a:link, a:visited{
+    text-decoration: none;
+    color: var(--light-text);
 }
