@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 :root{
     --primary-button: #036666;
     --main-box: #78c6a3;
@@ -16,7 +16,10 @@ body{
     font-style: normal;
     font-variation-settings:
         "ARRR" 10;
-    margin: 0px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
 }
 
 .header-lg{
@@ -50,6 +53,14 @@ body{
     color: var(--primary-button)
 }
 
+h2 {
+    font-family: "Inria Serif", serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    color: #036666
+}
+
 .lg-button{
     border-radius: 10px;
     background: var(--primary-button);
@@ -71,9 +82,9 @@ body{
 }
 
 .background-div{
+    min-height: 100vh;
     background: linear-gradient(var(--background-dark), var(--background-light));
     text-align: center;
-    border-radius: 0px 0px 50px 50px;
     margin-top: 2px;
 }
 
@@ -102,7 +113,9 @@ body{
     bottom: 0px;
     display: flex;
     justify-content: center;
-    margin-bottom: 2px;
+    gap: 20px;
+    padding-bottom: 10px;
+    background-color: var(--primary-button);
 }
 
 .nav-bottom a:hover, a:active, a:link, a:visited{
@@ -110,51 +123,9 @@ body{
     color: var(--light-text);
 }
 
-.nav-bottom a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav-bottom div{
-    width: 60px;
-    padding: 4px;
-}
-
-.nav-bottom div:nth-child(odd){
-    background-color: var(--primary-button);
-}
-
-.nav-bottom div:nth-child(even){
-    background-color: var(--background-dark);
-}
-
-.nav-bottom img{
-    width: 30px;
-    height: 30px;
-}
-
-.nav-bottom p{
-    margin: 0px;
-}
-
-.nav-bottom div:first-child{
-    border-radius: 10px 0px 0px 10px;
-}
-.nav-bottom div:last-child{
-    border-radius: 0px 10px 10px 0px;
-}
-
-@media screen and (min-width: 500px) {
-    .nav-bottom{
-        bottom: 5px;
-    }
-    .nav-bottom img{
-        width: 40px;
-        height: 40px;
-    }
-    .nav-bottom div{
-        width: 70px;
-        padding: 4px;
-    }
+#buttons {
+    display:flex;
+    gap: 6vw;
+    justify-content: center;
+    margin-top: 10vh;
 }
