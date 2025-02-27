@@ -33,6 +33,18 @@ body{
     font-size: 2.5rem;
 }
 
+.header-sm{
+    padding-left: 12px;
+    height: 65px;
+    padding-top: 0px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.header-sm-text{
+    text-align: left;
+    font-size: 2rem;
+}
+
 .energy-span{
     color: var(--background-dark)
 }
@@ -41,10 +53,17 @@ body{
     color: var(--primary-button)
 }
 
+main-background{
+    background: var(--background-dark)
+}
+
 h2 {
-    font-family: "Inria Serif", serif;
-    font-weight: bold;
-    font-style: italic;
+    font-family: "AR One Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "ARRR" 10;
     font-size: 2rem;
     color: #036666
 }
@@ -72,8 +91,7 @@ h2 {
 .background-div{
     min-height: 100vh;
     background: linear-gradient(var(--background-dark), var(--background-light));
-    text-align: center;
-    margin-top: 2px;
+    padding-left: 12vw;
 }
 
 .background-image{
@@ -91,6 +109,7 @@ h2 {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+        
     }
 }
 
@@ -116,4 +135,109 @@ h2 {
     gap: 6vw;
     justify-content: center;
     margin-top: 10vh;
+}
+
+.nav-bottom a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bottom div{
+    width: 60px;
+    padding: 4px;
+}
+
+.nav-bottom div:nth-child(odd){
+    background-color: var(--primary-button);
+}
+
+.nav-bottom div:nth-child(even){
+    background-color: var(--background-dark);
+}
+
+.nav-bottom img{
+    width: 30px;
+    height: 30px;
+}
+
+.nav-bottom p{
+    margin: 0px;
+}
+
+.nav-bottom div:first-child{
+    border-radius: 10px 0px 0px 10px;
+}
+.nav-bottom div:last-child{
+    border-radius: 0px 10px 10px 0px;
+}
+
+@media screen and (min-width: 500px) {
+    .nav-bottom{
+        bottom: 5px;
+    }
+    .nav-bottom img{
+        width: 40px;
+        height: 40px;
+    }
+    .nav-bottom div{
+        width: 70px;
+        padding: 4px;
+    }
+}
+
+/* white block */
+.white-name-div {
+    background-color: white;
+    height: 10vh;
+    display: flex;
+}
+
+.white-name-div h2 {
+    margin-left: 10vw;
+}
+
+.round-box {
+    width: 150px;  
+    height: 150px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #99E2B4; 
+    margin-left: 5vw;
+}
+
+.round-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+h3 {
+    font-weight: lighter;
+    padding-top: 8vh;
+    font-size: 1rem;
+    margin-left: 20vw;
+}
+
+
+.white-box-1 {
+    background-color: white;
+    width: 70vw;
+    height: 25vh;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-bottom: -8vh;
+    font-size: 0.8rem;
+}
+
+.white-box-2 {
+    background-color: white;
+    width: 70vw;
+    height: 18vh;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 0.8rem;
 }
