@@ -19,7 +19,7 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
-
+    overflow: hidden;
 }
 
 .header-lg{
@@ -31,18 +31,6 @@ body{
 .header-lg-text{
     text-align: center;
     font-size: 2.5rem;
-}
-
-.header-sm{
-    padding-left: 12px;
-    height: 65px;
-    padding-top: 0px;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-.header-sm-text{
-    text-align: left;
-    font-size: 2rem;
 }
 
 .energy-span{
