@@ -94,6 +94,7 @@ body{
     max-width: 70vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: -20vh;
+    margin-bottom: 15vh;
 }
 
 /* Form Title */
@@ -143,6 +144,17 @@ input {
     }
 }
 
+p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--dark-text);
+}
+
+a {
+    color: var(--primary-button);
+    text-decoration: none;
+    font-weight: bold;
+}
 
 
 .footer {
