@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap');
 @import url('components.css');
 
-:root{
+:root {
     --primary-button: #036666;
     --main-box: #78c6a3;
     --background-dark: #99E2B4;
@@ -17,31 +17,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Top white section */
-/* .top-section {
-    width: 100%;
+.top-section {
+    width: 100vw;  /* Ensure full viewport width */
+    max-width: 100%; /* Prevent any unexpected constraints */
     background-color: white;
-    padding: -20px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-} */
-
-.top-section h1 {
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--dark-text);
 }
+
 
 /* Title styling */
-.energy-span{
-    color: var(--background-dark)
+.energy-span {
+    color: var(--background-dark);
 }
-.wise-span{
-    color: var(--primary-button)
+.wise-span {
+    color: var(--primary-button);
 }
 
 /* Gradient background */
@@ -54,62 +52,66 @@ body {
     justify-content: center;
     width: 100%;
     background: linear-gradient(var(--background-dark), var(--background-light));
-
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
-    margin-left: -10px;
-    padding: 10px 0; /* Need to adjust this for the background globe effect*/
+    padding: 50px 0;
     box-shadow: 0px 4px 0.5px rgba(0, 0, 0, 0.15);
 }
 
 /* Globe background image */
 .background-image {
-    width: 350px;
+    width: 100%;
+    /* max-width: 400px; Larger on desktop */
 }
 
 /* Login container */
 .form-container {
-    margin-left: 30px;
     background-color: var(--main-box);
-    padding: 15px;
-    margin-top: 175px;
+    padding: 25px;
     border-radius: 15px;
     text-align: center;
-    width: 80%;
-    max-width: 350px;
+    width: 90%;
+    max-width: 420px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Centering */
+    position: absolute; /* Ensure it moves with screen size */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
 }
+
 
 h2 {
     color: var(--light-text);
-    font-size: 32px;
+    font-size: 30px;
 }
 
 input {
-    width: 80%;
+    width: 90%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 12px 0;
     border-radius: 5px;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
 }
 
 .lg-button {
-    width: 60%;
-    height: 45px;
-    font-size: 18px;
+    width: 75%;
+    height: 50px;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 10px;
     border: none;
     background-color: var(--primary-button);
     color: var(--light-text);
-    margin: 20px;
+    margin-top: 20px;
 }
 
 p {
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 16px;
+    margin-top: 12px;
     color: var(--dark-text);
 }
 
@@ -122,9 +124,16 @@ a {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-top: 50px;
+    gap: 20px;
+
+    /* Ensure it stays at the bottom */
+    position: absolute;
+    bottom: 80px; /* Adjust this value to keep it above the footer */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
+
 
 .social-icons img {
     width: 40px;
@@ -138,10 +147,126 @@ a {
     text-align: center;
     background-color: var(--primary-button);
     color: var(--light-text);
-    padding: 10px 0;
+    padding: 12px 0;
     position: fixed;
     bottom: 0;
     left: 0;
 }
 
 /* MEDIA QUERIES */
+
+/* Large Screens (Desktops, Laptops) */
+@media (min-width: 1280px) {
+    .form-container {
+        max-width: 500px; /* Make login box wider */
+        padding: 30px;
+        margin-top: 250px;
+    }
+
+    .background-div {
+        padding: 70px 0;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    input {
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    .lg-button {
+        width: 60%;
+        font-size: 22px;
+        height: 55px;
+    }
+
+    .social-icons {
+        gap: 25px;
+    }
+
+    .social-icons img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Tablets (iPads, Mid-Size Screens) */
+@media (max-width: 1024px) {
+    .form-container {
+        margin-top: 150px;
+        width: 85%;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .background-div {
+        padding: 40px 0;
+    }
+
+    .lg-button {
+        width: 75%;
+    }
+}
+
+/* Mobile Phones (iPhone 14, Pixel, etc.) */
+@media (max-width: 768px) {
+    .form-container {
+        margin-top: 120px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .background-div {
+        padding: 30px 0;
+    }
+
+    .social-icons img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .lg-button {
+        width: 70%;
+        font-size: 16px;
+        height: 40px;
+    }
+}
+
+/* Small Phones (iPhone SE, older models) */
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .lg-button {
+        width: 80%;
+        font-size: 14px;
+        height: 38px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+}

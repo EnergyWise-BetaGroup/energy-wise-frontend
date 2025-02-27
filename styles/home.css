@@ -19,7 +19,22 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.top-section {
+    height: 85px;
+    padding-top: 10px;
+    box-shadow: 0 4px 20px 2px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000; 
+    padding: 10px 0;
+    text-align: center;
 }
 
 .header-lg{
