@@ -1,7 +1,7 @@
 // Login Page
 document.getElementById("login-form").addEventListener("submit", login)
 
-const url = "https://learnifybackend-wvnw.onrender.com"
+const url = "http://localhost:3000"
 
 async function login(e) {
     e.preventDefault();
