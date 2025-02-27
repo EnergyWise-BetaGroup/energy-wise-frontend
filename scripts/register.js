@@ -1,7 +1,7 @@
 // Register Page
 document.querySelector("form").addEventListener("submit", registerUser);
 
-const url = "http://localhost:3000";
+const url = "http://energywise.ddns.net"; //this could change
 
 async function registerUser(e) {
     e.preventDefault();
