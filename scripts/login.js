@@ -1,5 +1,5 @@
 // Login Page
-document.getElementById("login-form").addEventListener("submit", login)
+document.querySelector("form").addEventListener("submit", login);
 
 const url = "http://energywise.ddns.net:3000" //THIS COULD CHANGE
 
