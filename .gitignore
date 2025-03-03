@@ -1,4 +1,13 @@
+# Node.js dependencies
+package-lock.json
 node_modules
+
+# Jest testing
+coverage
+jest-cache/
+jest-test-results.json
+
+# Windows OS
 .DS_Store
 .vscode
-coverage
+
