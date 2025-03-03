@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", loadProfile);
 
-const url = "http://energywise.ddns.net";
+const url = "http://energywise.ddns.net:3000";
 
 async function loadProfile() {
     // Get stored token from localStorage
@@ -39,7 +39,7 @@ async function loadProfile() {
 // This is to display the correct user fields
 function updateProfileUI(user) {
     document.querySelector(".white-name-div h2").textContent = user.name || "[NAME]";
-    document.querySelector(".round-image").src = user.profileImage || "./assets/default-profile.png";
+    document.querySelector(".round-image").src = user.profileImage || "./assets/quokka.jpg";
 
     const infoBox = document.querySelector(".white-box-1");
     infoBox.innerHTML = `
