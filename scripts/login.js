@@ -19,7 +19,6 @@ async function login(e) {
     };
     const response = await fetch(`${url}/users/login`, options);
     const data = await response.json();
-    console.log(data);
 
     if (response.ok) {
         localStorage.setItem("token", data.token);

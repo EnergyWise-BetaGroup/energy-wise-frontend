@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap');
-@import url('components.css');
 
 :root{
     --primary-button: #036666;
@@ -10,74 +9,91 @@
     --light-text: #FFFFFF;
 }
 
-body {
-    font-family: "AR One Sans", sans-serif;
-    background-color: white;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body{
+    font-family: "AR One Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "ARRR" 10;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-/* Top White Section
 .top-section {
+    height: 85px;
+    padding-top: 10px;
+    box-shadow: 0 4px 20px -2px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: white;
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-} */
-
-.top-section h1 {
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--dark-text);
-}
-
-/* Title Styling */
-.energy-span{
-    color: var(--background-dark);
-}
-.wise-span{
-    color: var(--primary-button);
-}
-
-/* Gradient Background */
-.background-div {
-    position: fixed;
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background: linear-gradient(var(--background-dark), var(--background-light));
-    
-    border-bottom-left-radius: 20%;
-    border-bottom-right-radius: 20%;
-    margin-left: -10px;
+    z-index: 1000; 
     padding: 10px 0;
-    box-shadow: 0px 4px 0.5px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
-/* Globe Background Image */
-.background-image {
+.header-lg{
+    height: 85px;
+    padding-top: 10px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.header-lg-text{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.energy-span{
+    color: var(--background-dark)
+}
+
+.wise-span{
+    color: var(--primary-button)
+}
+
+.lg-button{
+    border-radius: 10px;
+    background: var(--primary-button);
+    color: var(--light-text);
+    font-size: large;
+    width: 130px;
+    height: 50px;
+    border: none;
+}
+
+.background-div {
+    background: linear-gradient(var(--background-dark), var(--background-light));
+    text-align: center;
+    border-radius: 0px 0px 50px 50px;
+    margin-top: 85px; 
+    position: relative; 
+    width: 100%;
+    padding: 40px 0; 
+    box-shadow: 0px 4px 0.5px rgba(0, 0, 0, 0.15);
+    z-index: -1;
+}
+
+
+.background-image{
     width: 350px;
 }
 
 /* Registration Form Container */
 .form-container {
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--main-box);
     padding: 20px;
-    margin-top: 140px;
     border-radius: 15px;
     text-align: center;
     width: 80%;
-    max-width: 350px;
+    max-width: 70vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -20vh;
+    margin-bottom: 15vh;
 }
 
 /* Form Title */
@@ -111,21 +127,35 @@ input {
     margin: 20px;
 }
 
-/* Paragraph Text */
+
+
+@media screen and (min-width: 650px) {
+    .background-image{
+        width: unset;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .background-div{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 p {
     font-size: 14px;
     margin-top: 10px;
     color: var(--dark-text);
 }
 
-/* Links */
 a {
     color: var(--primary-button);
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Footer */
+
 .footer {
     width: 100%;
     text-align: center;

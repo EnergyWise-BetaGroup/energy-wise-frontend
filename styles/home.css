@@ -19,13 +19,20 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
-.header-lg{
+.top-section {
     height: 85px;
     padding-top: 10px;
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 4px 20px -2px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    text-align: center;
+    padding: 10px 0;
 }
 
 .header-lg-text{
@@ -46,7 +53,7 @@ h2 {
     font-weight: bold;
     font-style: italic;
     font-size: 2rem;
-    color: #036666
+    color: #036666;
 }
 
 .lg-button{
@@ -73,7 +80,7 @@ h2 {
     min-height: 100vh;
     background: linear-gradient(var(--background-dark), var(--background-light));
     text-align: center;
-    margin-top: 2px;
+    margin-top: 85px;
 }
 
 .background-image{

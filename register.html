@@ -25,13 +25,25 @@
     <div class="form-container">
         <h2>Registration</h2>
         <form>
+            <!-- User Information -->
             <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
-            <input type="text" placeholder="Username" required>
+            <input type="text" placeholder="Username" required> 
             <input type="email" placeholder="Email" required>
             <input type="password" placeholder="Password" required>
             <input type="password" placeholder="Repeat Password" required>
-            <input type="text" placeholder="Provider" required>
+            <input type="text" placeholder="Postcode" required>
+            <input type="text" placeholder="Household Size" required>
+
+            <!-- Region selection -->
+            <select required> 
+                <option value="" disabled selected>Region:</option>
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="west">West</option>
+            </select>
+            
+
             <button type="submit" class="lg-button">Register</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a></p>
