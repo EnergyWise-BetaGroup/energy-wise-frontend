@@ -1,0 +1,35 @@
+{
+  "name": "energy-wise-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "dev": "live-server",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnergyWise-BetaGroup/energy-wise-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EnergyWise-BetaGroup/energy-wise-frontend/issues"
+  },
+  "homepage": "https://github.com/EnergyWise-BetaGroup/energy-wise-frontend#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^26.0.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/__tests__/helpers.js"
+    ]
+  }
+}
