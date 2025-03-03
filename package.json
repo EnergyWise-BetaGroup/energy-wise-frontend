@@ -1,7 +1,6 @@
 {
   "name": "energy-wise-frontend",
   "version": "1.0.0",
-<<<<<<< HEAD
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
@@ -27,17 +26,6 @@
   },
   "dependencies": {
     "live-server": "^1.2.2"
-=======
-  "description": "Frontend project with Jest and JSDOM testing",
-  "scripts": {
-    "test": "jest --watchAll",
-    "coverage": "jest --coverage"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "jsdom": "^22.1.0"
->>>>>>> 847b0bcb465476ad2e50aeba6f6ee2efead0e1ac
   },
   "jest": {
     "testPathIgnorePatterns": [

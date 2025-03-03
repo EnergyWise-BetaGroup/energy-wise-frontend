@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-node_modules
-.DS_Store
-.vscode
-coverage
-=======
 # Node.js dependencies
 package-lock.json
 node_modules
@@ -17,4 +11,3 @@ jest-test-results.json
 .DS_Store
 .vscode
 
->>>>>>> 847b0bcb465476ad2e50aeba6f6ee2efead0e1ac

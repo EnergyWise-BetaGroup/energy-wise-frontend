@@ -1,4 +1,4 @@
-const { renderDOM } = require('./helpers');
+const { renderDOM } = require('../../__tests__/helpers');
 
 let dom;
 let document;
