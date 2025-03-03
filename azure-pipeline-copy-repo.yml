@@ -17,5 +17,4 @@ stages:
         sourceFolder: '$(Build.SourcesDirectory)/'
         contents: '**'
         targetFolder: '/var/www/html/'
-        cleanTargetFolder: true
         readyTimeout: '20000'
