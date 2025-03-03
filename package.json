@@ -1,0 +1,16 @@
+{
+  "name": "energy-wise-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  
+  "scripts": {
+    "dev": "live-server",
+    "test": "jest --watchAll",
+    "coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
