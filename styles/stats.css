@@ -1,0 +1,228 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap');
+
+/* Root Variables */
+:root {
+    --primary-button: #036666;
+    --main-box: rgba(120, 198, 163, 0.9); /* Slight transparency */
+    --background-dark: #99E2B4;
+    --background-light: #E4FFEE;
+    --dark-text: #000000;
+    --light-text: #FFFFFF;
+}
+
+/* Global Styles */
+body {
+    font-family: "AR One Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "ARRR" 10;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Top Section - Header */
+.top-section {
+    height: 85px;
+    padding-top: 10px;
+    box-shadow: 0 4px 20px -2px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000; 
+    text-align: center;
+}
+
+.header-lg-text {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.energy-span {
+    color: var(--background-dark);
+}
+
+.wise-span {
+    color: var(--primary-button);
+}
+
+/* Background Section */
+.background-div {
+    background: linear-gradient(var(--background-dark), var(--background-light));
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+    margin-top: 85px; 
+    position: relative; 
+    width: 100%;
+    padding: 40px 0; 
+    box-shadow: 0px 4px 0.5px rgba(0, 0, 0, 0.15);
+    z-index: -1;
+}
+
+.line-chart {
+    width: 75vw;
+    height: 20vh;
+}
+
+.background-image {
+    width: 350px;
+}
+
+/* Form Section */
+.form-container {
+    margin: -2vh auto 0;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align:start;
+    width: 80%;
+    max-width: 70vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title */
+h2 {
+    color: black;
+    font-size: 20px;
+}
+
+/* General Styling */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+
+}
+
+/* donut chart section */
+.donut-chart-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 20vw;
+    height: 10vh
+}
+
+/* Customizing Bullet Points */
+.coal::marker {
+    color: #FA4848;
+}
+
+.oil::marker {
+    color: #F58CAD;
+}
+
+.nuclear::marker {
+    color: #868686;
+}
+
+.wind::marker {
+    color: #28DEB0;
+}
+
+.solar::marker {
+    color: #8CF5DA;
+}
+
+/* Typography */
+p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--dark-text);
+}
+
+/* Responsive Design */
+@media screen and (min-width: 650px) {
+    .background-image {
+        width: unset;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .background-div {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.nav-bottom{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    background-color: var(--primary-button);
+}
+
+.nav-bottom a:hover, a:active, a:link, a:visited{
+    text-decoration: none;
+    color: var(--light-text);
+}
+
+#buttons {
+    display:flex;
+    gap: 6vw;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.nav-bottom a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bottom div{
+    width: 60px;
+    padding: 4px;
+}
+
+.nav-bottom div:nth-child(odd){
+    background-color: var(--primary-button);
+}
+
+.nav-bottom div:nth-child(even){
+    background-color: var(--background-dark);
+}
+
+.nav-bottom img{
+    width: 30px;
+    height: 30px;
+}
+
+.nav-bottom p{
+    margin: 0px;
+}
+
+.nav-bottom div:first-child{
+    border-radius: 10px 0px 0px 10px;
+}
+.nav-bottom div:last-child{
+    border-radius: 0px 10px 10px 0px;
+}
+
+@media screen and (min-width: 500px) {
+    .nav-bottom{
+        bottom: 5px;
+    }
+    .nav-bottom img{
+        width: 40px;
+        height: 40px;
+    }
+    .nav-bottom div{
+        width: 70px;
+        padding: 4px;
+    }
+}
