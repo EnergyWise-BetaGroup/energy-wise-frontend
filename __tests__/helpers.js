@@ -7,6 +7,11 @@ const { JSDOM } = jsdom;
 const renderDOM = async (filename) => {
   //The process.cwd() method is an inbuilt application programming interface of the process module which is used to get the current working directory of the node.js process.
   const filePath = path.join(process.cwd(), filename);
+
+
+
+
+  
   //Similar to fromURL(), jsdom also provides a fromFile() factory method for constructing a jsdom from a filename
   // To enable executing scripts inside the page, you can use the runScripts: "dangerously" option
   //If you want to execute external scripts, included via <script src="">, you'll also need to ensure that they load them. To do this, add the option resources: "usable" as described below. (You'll likely also want to set the url option, for the reasons discussed there.)
