@@ -5,7 +5,7 @@ const lineMountPoint = document.getElementById("line-mount-point")
 const token = localStorage.getItem("token");
 
 function mountChart(htmlData) {
-    mountPoint.innerHTML = htmlData
+    lineMountPoint.innerHTML = htmlData
 }
 
 async function fetchChart(){
@@ -18,7 +18,7 @@ async function fetchChart(){
 
     mountChart(returnedData.html)
 
-    var scripts = mountPoint.getElementsByTagName("script");
+    var scripts = lineMountPoint.getElementsByTagName("script");
     for(var i=0; i < scripts.length; i++) {
         eval(scripts[i].innerHTML);
     }
