@@ -1,27 +1,33 @@
 const url = "http://energywise.ddns.net:3000"
 
 const lineMountPoint = document.getElementById("line-mount-point")
+const donutMountPoint = document.getElementById("donut-mount-point")
 
 const token = localStorage.getItem("token");
 
-function mountChart(htmlData) {
-    lineMountPoint.innerHTML = htmlData
-}
-
-async function fetchChart(){
+async function fetchChart(chart ,mountPoint){
     options = {
         headers: {authorization: token}
     }
 
-    const response = await fetch(`${url}/stats`, options)
+    const response = await fetch(`${url}/stats/${chart}`, options)
     const returnedData = await response.json()
 
-    mountChart(returnedData.html)
+    if(returnedData.html) {
+        mountPoint.innerHTML = returnedData.html
+    } else {
+        console.error("Error fetching chart")
+    }
 
-    var scripts = lineMountPoint.getElementsByTagName("script");
+    var scripts = mountPoint.getElementsByTagName("script");
     for(var i=0; i < scripts.length; i++) {
         eval(scripts[i].innerHTML);
     }
 }
 
-window.addEventListener("DOMContentLoaded", fetchChart)
+function fetchAllCharts() {
+    fetchChart("line-graph", lineMountPoint)
+    fetchChart("donut", donutMountPoint)
+}
+
+window.addEventListener("DOMContentLoaded", fetchAllCharts)
