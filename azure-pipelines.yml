@@ -21,10 +21,3 @@ stages:
           sudo systemctl start apache2
           sudo systemctl enable apache2
         readyTimeout: '20000'
-    - task: CopyFilesOverSSH@0
-      inputs:
-        sshEndpoint: 'Azure VM EnergyWise'
-        sourceFolder: '$(Build.SourcesDirectory)'
-        targetFolder: '/var/www/html'
-        cleanTargetFolder: true
-        readyTimeout: '20000'
