@@ -19,7 +19,6 @@ stages:
           sudo apt-get update -y
           sudo apt-get install apache2 -y
           sudo systemctl start apache2
-          sudo systemctl enable apache2
           sudo chown -R www-data:www-data /var/www/html
           sudo chmod -R 777 /var/www/html
         readyTimeout: '20000'
