@@ -8,14 +8,14 @@ stages:
 - stage: Deploy
   displayName: 'Deploy Apache HTTP Server'
   jobs:
-  - job: InstallHttpd
-    displayName: 'Install HTTPD on Azure VM'
+  - job: CopyRepo
+    displayName: 'Copy HTML from Repo on to Azure VM'
     steps:
     - task: CopyFilesOverSSH@0
       inputs:
         sshEndpoint: 'Azure VM EnergyWise'
         sourceFolder: '$(Build.SourcesDirectory)/'
         contents: '**'
-        targetFolder: '/var/www/html'
+        targetFolder: '/var/www/html/'
         cleanTargetFolder: true
         readyTimeout: '20000'
