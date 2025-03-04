@@ -9,5 +9,9 @@ jest-test-results.json
 
 # Windows OS
 .DS_Store
+<<<<<<< HEAD
 .vscode
 
+=======
+.vscode
+>>>>>>> 93710c34728afb215fbfd09cda9b22c72efd0c69
