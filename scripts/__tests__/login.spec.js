@@ -25,7 +25,7 @@ describe('login.html', () => {
     });
 
     it("has a login form", () => {
-        const loginForm = document.querySelector("#login-form form");
+        const loginForm = document.querySelector("#login-form");
         expect(loginForm).toBeTruthy();
         expect(loginForm.tagName).toBe("FORM"); 
     });
