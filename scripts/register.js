@@ -15,7 +15,6 @@ async function registerUser(e) {
         repeatPassword: e.target.elements[4].value,
         postcode: e.target.elements[5].value,
         householdSize: e.target.elements[6].value,
-        region: e.target.elements[7].value
     };
 
     // Validate password match
