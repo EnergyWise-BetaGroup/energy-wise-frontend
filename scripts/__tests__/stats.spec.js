@@ -26,4 +26,14 @@ describe("Stats Page - Charts Fetching", () => {
         expect(h2.innerHTML).toContain("My footprint")
     })
 
+    it("has a line chart image", () => {
+        const img = document.querySelector(".background-div > img")
+        expect(img).toBeTruthy
+    })
+
+    it("has a donut chart image", () => {
+        const img = document.querySelector(".donut-chart-section > img")
+        expect(img).toBeTruthy
+    })
+
 });
