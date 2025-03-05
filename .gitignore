@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 node_modules
 .DS_Store
 .vscode
 coverage
+=======
+# Node.js dependencies
+package-lock.json
+node_modules
+
+# Jest testing
+coverage
+jest-cache/
+jest-test-results.json
+
+# Windows OS
+.DS_Store
+.vscode
+>>>>>>> ef08c56be2479ba81c8db7a05252681c44707fdf

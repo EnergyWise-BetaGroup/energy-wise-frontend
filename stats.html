@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stats - EnergyWise</title>
     <link rel="stylesheet" href="/styles/stats.css">
+    <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.0.min.js"></script>
+    <script src="./scripts/stats.js" defer ></script>
 </head>
 <body>
 <main>
@@ -18,24 +20,15 @@
     <!-- Background Globe Section -->
     <div class="background-div">
         <h2>My footprint</h2>
-        <img src="./assets/line-chart.png" alt="line-chart" class="line-chart">
+        <div id="line-mount-point"></div>
     </div>
 
     <!-- LOGIN FORM -->
     <div class="form-container">
-        <h2>Footprint per category</h2>
-        <p>Your emissions per category</p>
-        <div class="donut-chart-section">
-            <img src="./assets/donut-chart.png" alt="chart of emissions">
-            <ul>
-                <li class="coal">Coal</li>
-                <li class="oil">Oil</li>
-                <li class="nuclear">Nuclear</li>
-                <li class="wind">Wind</li>
-                <li class="solar">Solar</li>
-            </ul>
-        </div>
-    </div>
+        <h2>Current emissions</h2>
+        <p>The grid in your area per category</p>
+        <div id="donut-mount-point"></div>
+    </div>  
     
     
 </main>
@@ -46,7 +39,7 @@
         <a href="/"><img src="assets/home-light.png" alt=""><p>Home</p></a>
     </div>
     <div>
-        <a href="actions.html"><img src="assets/task-dark.png" alt=""><p>Actions</p></a>
+        <a href="actionPage.html"><img src="assets/task-dark.png" alt=""><p>Actions</p></a>
     </div>
     <div>
         <a href="profile.html"><img src="assets/account-light.png" alt=""><p>Profile<p></p></a>

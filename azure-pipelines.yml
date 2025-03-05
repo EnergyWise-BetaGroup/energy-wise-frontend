@@ -1,0 +1,24 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Deploy
+  displayName: 'Deploy Apache HTTP Server'
+  jobs:
+  - job: InstallHttpd
+    displayName: 'Install HTTPD on Azure VM'
+    steps:
+    - task: SSH@0
+      inputs:
+        sshEndpoint: 'Azure VM EnergyWise'
+        runOptions: 'commands'
+        commands: |
+          sudo apt-get update -y
+          sudo apt-get install apache2 -y
+          sudo systemctl start apache2
+          sudo chown -R www-data:www-data /var/www/html
+          sudo chmod -R 777 /var/www/html
+        readyTimeout: '20000'

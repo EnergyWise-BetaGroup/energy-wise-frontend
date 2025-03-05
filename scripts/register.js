@@ -1,7 +1,11 @@
 // Register Page
 document.querySelector("form").addEventListener("submit", registerUser);
 
+<<<<<<< HEAD
 const url = "http://energywise.ddns.net"; //this could change
+=======
+const url = "http://energywise.ddns.net:3000"; //this could change
+>>>>>>> ef08c56be2479ba81c8db7a05252681c44707fdf
 
 async function registerUser(e) {
     e.preventDefault();
@@ -48,4 +52,8 @@ async function registerUser(e) {
         console.error("Error:", error);
         alert("Something went wrong. Please check your connection and try again.");
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ef08c56be2479ba81c8db7a05252681c44707fdf
