@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", loadProfile);
 
 const url = "http://energywise.ddns.net:3000";
 
+
 async function loadProfile() {
     // Get stored token from localStorage
     const token = localStorage.getItem("token");
