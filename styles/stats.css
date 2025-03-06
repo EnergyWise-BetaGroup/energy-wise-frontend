@@ -221,5 +221,46 @@ p {
 .nav-bottom p {
     color: white;
     font-size: 1em;
+}
 
+.gauge-container {
+    display: flex;
+    justify-content: center;
+}
+
+#gauge1-mount-point{
+    width: 300px;
+    height: 150px;
+}
+
+#gauge1-mount-point > :first-child {
+    margin-top: -50px;
+}
+
+#gauge2-mount-point{
+    width: 300px;
+    height: 150px;
+}
+
+#gauge2-mount-point > :first-child {
+    margin-top: -50px;
+    margin-left: -95px;
+}
+
+#current-data-mount-point{
+    font-size: 1.75em;
+}
+
+.current-data-label{
+    margin: 0px;
+}
+
+.title1{
+    margin-top: 25px;
+    margin-left: 98px;
+}
+
+.title2{
+    margin-top: 25px;
+    margin-left: -90px;
 }

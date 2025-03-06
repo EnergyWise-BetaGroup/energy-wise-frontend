@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stats - EnergyWise</title>
-    <link rel="stylesheet" href="./styles/stats.css">
-    <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.0.min.js"></script>
-    <script src="./scripts/stats.js" defer ></script>
-</head>
-<body>
-<main>
-    <!-- Top White Section with Company Name -->
-    <div class="top-section">
-        <h1 class="header-lg-text">
-            <span class="energy-span">Energy</span><span class="wise-span">Wise</span>
-        </h1>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stats - EnergyWise</title>
+        <link rel="stylesheet" href="/styles/stats.css" />
+        <script
+            charset="utf-8"
+            src="https://cdn.plot.ly/plotly-3.0.0.min.js"
+        ></script>
+        <script src="./scripts/stats.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <!-- Top White Section with Company Name -->
+            <div class="top-section">
+                <h1 class="header-lg-text">
+                    <span class="energy-span">Energy</span
+                    ><span class="wise-span">Wise</span>
+                </h1>
+            </div>
 
-    <!-- Background Globe Section -->
-    <div class="background-div">
-        <h2>My footprint</h2>
-        <div id="line-mount-point"></div>
-    </div>
+            <!-- Background Globe Section -->
+            <div class="background-div">
+                <h2>My footprint</h2>
+                <div class="gauge-container">
+                    <div><div id="gauge1-mount-point"></div><p class="title1">% Daily Change</p></div>
+                    <div>
+                        <p id="current-data-mount-point" class="current-data-label"></p>
+                        <p class="current-data-label">Yesterday's</p>
+                        <p class="current-data-label">g of CO2</p>
+                    </div>
+                    <div><div id="gauge2-mount-point"></div><p class="title2">% Weekly Change</p></div>
+                </div>
+                
+                <div id="line-mount-point"></div>
+            </div>
 
-    <!-- LOGIN FORM -->
-    <div class="form-container">
-        <h2>Current emissions</h2>
-        <p>The grid in your area per category</p>
-        <div id="donut-mount-point"></div>
-    </div>  
-    
-    
-</main>
+            <!-- LOGIN FORM -->
+            <div class="form-container">
+                <h2>Current emissions</h2>
+                <p>The grid in your area per category</p>
+                <div id="donut-mount-point"></div>
+            </div>
+        </main>
+
 
 <!-- Bottom Nav Bar -->
 <nav class="nav-bottom" >
@@ -53,4 +66,5 @@
 </nav>
 
 </body>
+
 </html>
