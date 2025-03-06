@@ -70,13 +70,13 @@ body{
 .notifications-container {
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--main-box);
+    background: linear-gradient(var(--background-dark), var(--background-light));
     padding: 2vh;
-    border-radius: 15px;
+    border-radius: 0 0 15px 15px;
     text-align: center;
     max-width: 80vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 5vh;
+    margin-top: 0vh;
     margin-left: auto;
     margin-right: auto;
 }
