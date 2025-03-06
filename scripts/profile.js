@@ -62,8 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const tariffBox = document.querySelector(".white-box-2");
     const headings = document.querySelectorAll("h3");
 
-    // Show edit form and hide profile information, including the edit button itself
+    // Show edit form and hide profile information
     editProfileButton.addEventListener("click", () => {
+        // Optionally, pre-fill the form with the current user data here.
         editProfileForm.classList.remove("hidden");
         userInfoSection.classList.add("hidden");
         infoBox.classList.add("hidden");
@@ -72,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         editProfileButton.classList.add("hidden"); // Hide the edit profile button
     });
 
-    // Cancel edit and restore profile view, including the edit button
+    // Cancel edit and restore profile view
     cancelEditButton.addEventListener("click", () => {
         editProfileForm.classList.add("hidden");
         userInfoSection.classList.remove("hidden");
@@ -80,5 +81,55 @@ document.addEventListener("DOMContentLoaded", () => {
         tariffBox.classList.remove("hidden");
         headings.forEach(h3 => h3.classList.remove("hidden"));
         editProfileButton.classList.remove("hidden"); // Show the edit profile button again
+    });
+
+    // NEW: Handle form submission to save changes
+    const profileForm = document.querySelector("#profile-form");
+    profileForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        // Gather form values into an object
+        const updatedUser = {
+            // Using the username field as the name for simplicity.
+            name: document.querySelector("#username").value,
+            username: document.querySelector("#username").value,
+            email: document.querySelector("#email").value,
+            address: document.querySelector("#address").value,
+            yearOfBirth: document.querySelector("#yearOfBirth").value,
+            postcode: document.querySelector("#postcode").value,
+            householdSize: document.querySelector("#householdSize").value,
+            // Keep the profile image the same or update if you have an input for it.
+            profileImage: "./assets/quokka.jpg"
+        };
+
+        // Optionally, send the updated data to the server via a PUT/PATCH request.
+        try {
+            const token = localStorage.getItem("token");
+            const response = await fetch(`${url}/users/profile`, {
+                method: "PUT", // Use PATCH if partial update is preferred.
+                headers: {
+                    "Authorization": `${token}`,
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(updatedUser)
+            });
+            if (!response.ok) {
+                throw new Error("Failed to update profile data.");
+            }
+            // Update the UI with the new user data
+            updateProfileUI(updatedUser);
+        } catch (error) {
+            console.error("Error updating profile data:", error);
+            alert("Could not save profile changes. Please try again.");
+            return;
+        }
+
+        // Hide the edit form and restore the profile view
+        editProfileForm.classList.add("hidden");
+        userInfoSection.classList.remove("hidden");
+        infoBox.classList.remove("hidden");
+        tariffBox.classList.remove("hidden");
+        headings.forEach(h3 => h3.classList.remove("hidden"));
+        editProfileButton.classList.remove("hidden");
     });
 });
