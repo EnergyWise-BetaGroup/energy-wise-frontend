@@ -77,9 +77,10 @@ h2 {
     background: var(--primary-button);
     color: var(--light-text);
     font-size: large;
-    width: 130px;
+    width: 125px;
     height: 50px;
     border: none;
+    margin-top: 3vh;
 }
 
 .sm-button{
@@ -132,21 +133,12 @@ h2 {
     bottom: 0px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding-bottom: 10px;
-    background-color: var(--primary-button);
+    margin-bottom: 2px;
 }
 
 .nav-bottom a:hover, a:active, a:link, a:visited{
     text-decoration: none;
     color: var(--light-text);
-}
-
-#buttons {
-    display:flex;
-    gap: 6vw;
-    justify-content: center;
-    margin-top: 10vh;
 }
 
 .nav-bottom a{
@@ -249,8 +241,12 @@ h3 {
 .white-box-2 {
     background-color: white;
     width: 70vw;
-    height: 18vh;
+    height: 8vh;
     padding: 5px 20px;
     border-radius: 10px;
     font-size: 0.8rem;
+}
+
+#edit-information {
+    display: flex;
 }
