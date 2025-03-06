@@ -1,4 +1,4 @@
-/* Import Google Font */
+
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap');
 
 /* Root Variables */
@@ -31,7 +31,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: white;
     z-index: 1000; 
     text-align: center;
@@ -87,7 +87,8 @@ body {
 /* Form Title */
 h2 {
     color: black;
-    font-size: 20px;
+    font-size: 1.7em;
+    margin-top: 0px;
 }
 
 /* General Styling */
@@ -161,21 +162,14 @@ p {
     bottom: 0px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    /* gap: 20px; */
     padding-bottom: 10px;
-    background-color: var(--primary-button);
+    /* background-color: var(--primary-button); */
 }
 
 .nav-bottom a:hover, a:active, a:link, a:visited{
     text-decoration: none;
     color: var(--light-text);
-}
-
-#buttons {
-    display:flex;
-    gap: 6vw;
-    justify-content: center;
-    margin-top: 10vh;
 }
 
 .nav-bottom a{
@@ -204,6 +198,7 @@ p {
 
 .nav-bottom p{
     margin: 0px;
+    color: #FFFFFF;
 }
 
 .nav-bottom div:first-child{
@@ -225,4 +220,58 @@ p {
         width: 70px;
         padding: 4px;
     }
+}
+
+.nav-bottom p {
+    color: white;
+    font-size: 1em;
+}
+
+.gauge-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#gauge1-mount-point{
+    width: 300px;
+    height: 150px;
+}
+
+#gauge1-mount-point > :first-child {
+    margin-top: -20px;
+    margin-left: 65px;
+}
+
+#gauge2-mount-point{
+    width: 300px;
+    height: 150px;
+}
+
+#gauge2-mount-point > :first-child {
+    margin-top: -20px;
+    margin-left: -112px;
+}
+
+#current-data-mount-point{
+    font-size: 1.75em;
+}
+
+.current-data-label{
+    margin: 0px;
+}
+
+.title1{
+    margin-top: 25px;
+    margin-left: 178px;
+}
+
+.title2{
+    margin-top: 25px;
+    margin-left: -172px;
+}
+
+#line-mount-point{
+    margin-top: -70px
 }

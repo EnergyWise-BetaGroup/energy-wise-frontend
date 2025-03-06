@@ -11,11 +11,15 @@ const token = localStorage.getItem("token");
 
 function mountHtml (mountPoint, returnedData) {
     if(returnedData.html) {
-        mountPoint.innerHTML = returnedData.html
+        mountPoint.innerHTML = returnedData.html + mountPoint.innerHTML
     } else {
         console.error("Error fetching chart")
     }
+    runScript(mountPoint)
 
+}
+
+function runScript(mountPoint){
     var scripts = mountPoint.getElementsByTagName("script");
     for(var i=0; i < scripts.length; i++) {
         eval(scripts[i].innerHTML);
@@ -54,6 +58,16 @@ async function fetchGauge (gauge1, gauge2, current) {
     mountHtml(gauge2, gauge2Chart)
     
     currentMountPoint.innerHTML = currentData
+
+    //gaugeResize(gauge2)
+}
+
+function gaugeResize (gauge) {
+    const gaugeDiv = document.querySelector('#gauge2-mount-point .plotly-graph-div')
+    gaugeDiv.style.width = "600px";
+    gaugeDiv.style.height = "400px";
+
+    runScript(gauge)
 }
 
 function fetchAllCharts() {

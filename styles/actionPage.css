@@ -162,7 +162,7 @@ body{
     bottom: 0px;
     display: flex;
     justify-content: center;
-    margin-bottom: 2px;
+    padding-bottom: 10px;
 }
 
 .nav-bottom a:hover, a:active, a:link, a:visited{

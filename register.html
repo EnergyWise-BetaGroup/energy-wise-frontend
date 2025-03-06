@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - EnergyWise</title>
-    <link rel="stylesheet" href="/styles/register.css">
+    <link rel="stylesheet" href="./styles/register.css">
     <script src="./scripts/register.js" defer></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
 
     <!-- Background Globe Section -->
     <div class="background-div">
-        <img src="/assets/world.png" alt="Globe Image" class="background-image">
+        <img src="./assets/world.png" alt="Globe Image" class="background-image">
     </div>
 
     <!-- Registration FORM -->
@@ -26,7 +26,6 @@
         <h2>Registration</h2>
         <form>
             <!-- User Information -->
-
             <input id="first-name" type="text" placeholder="First Name" required>
             <input id="username" type="text" placeholder="Username" required> 
             <input id="email" type="email" placeholder="Email" required>
@@ -34,17 +33,10 @@
             <input id="repeat-password" type="password" placeholder="Repeat Password" required>
             <input id="postcode" type="text" placeholder="Postcode" required>
             <input id="household-size" type="text" placeholder="Household Size" required>
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Username" required> 
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Repeat Password" required>
-            <input type="text" placeholder="Postcode" required>
-            <input type="text" placeholder="Household Size" required>
-            <br><br/>
-            <input type="text" placeholder="API Key" required>
-            <input type="text" placeholder="Account Number" required>
 
+            <br><br/>
+            <input type="text" id="api-key" placeholder="API Key" required>
+            <input type="text"id="account-number" placeholder="Account Number" required>
             <button type="submit" class="lg-button">Register</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a></p>
