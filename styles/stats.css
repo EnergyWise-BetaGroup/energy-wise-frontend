@@ -1,4 +1,4 @@
-/* Import Google Font
+
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap');
 
 /* Root Variables */
@@ -220,5 +220,6 @@ p {
 
 .nav-bottom p {
     color: white;
-    font-size: 1.1em;
+    font-size: 1em;
+
 }
