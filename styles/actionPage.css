@@ -218,3 +218,14 @@ body{
         padding: 4px;
     }
 }
+
+.key-items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: stretch;
+}
+
+.key-items p{
+    margin: 0px;
+}

@@ -1,4 +1,4 @@
-const url = "http://energywise.ddns.net:3000"
+const url = "http://localhost:3000"
 
 const tableMountPoint = document.getElementById("table-mount-point")
 
