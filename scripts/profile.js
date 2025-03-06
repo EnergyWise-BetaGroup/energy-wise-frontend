@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", loadProfile);
 
-const url = "http://energywise.ddns.net:3000";
+const url = "http://localhost:3000";
 
 
 async function loadProfile() {
