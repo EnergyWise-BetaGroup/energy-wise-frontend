@@ -1,7 +1,7 @@
 // Login Page
 document.querySelector("form").addEventListener("submit", login);
 
-const url = "http://localhost:3000" //THIS COULD CHANGE
+const url = "http://energywise.ddns.net:3000" //THIS COULD CHANGE
 
 async function login(e) {
     e.preventDefault();
