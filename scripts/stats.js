@@ -1,4 +1,4 @@
-const url = "http://localhost:3000"
+const url = "http://energywise.ddns.net:3000"
 
 const lineMountPoint = document.getElementById("line-mount-point")
 const donutMountPoint = document.getElementById("donut-mount-point")
