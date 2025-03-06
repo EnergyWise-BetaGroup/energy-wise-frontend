@@ -92,7 +92,7 @@ body{
     width: 80%;
     max-width: 70vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: -20vh;
+    margin-top: -28vh;
     margin-bottom: 15vh;
 }
 
@@ -165,4 +165,43 @@ a {
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+/* Modal Styles */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0, 0, 0); /* Black background */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
+    padding-top: 300px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Width of the modal */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

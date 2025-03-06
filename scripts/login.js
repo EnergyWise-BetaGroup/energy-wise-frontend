@@ -22,7 +22,7 @@ async function login(e) {
 
     if (response.ok) {
         localStorage.setItem("token", data.token);
-        window.location.assign("stats.html");
+        window.location.assign("actionPage.html");
     } else {
         alert(data.error);
     }

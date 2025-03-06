@@ -33,13 +33,19 @@
             <input id="repeat-password" type="password" placeholder="Repeat Password" required>
             <input id="postcode" type="text" placeholder="Postcode" required>
             <input id="household-size" type="text" placeholder="Household Size" required>
-
-            <br><br/>
+            <p id="helper"><b>Octopus Account Info</b><br />Click here for how to find this information</p>
             <input type="text" id="api-key" placeholder="API Key" required>
             <input type="text"id="account-number" placeholder="Account Number" required>
             <button type="submit" class="lg-button">Register</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>How to find this information</h3>
+            <p>Find your API key by logging in to <a href="https://octopus.energy" target="_blank">https://octopus.energy</a>, go to the Personal Details link under your name and account number (A-XXXX) reference, then click the API Access button in the Developer settings box. These are your API key (sk_live_XXXXXX) and Account number.</p>
+        </div>
     </div>
 </main>
 
