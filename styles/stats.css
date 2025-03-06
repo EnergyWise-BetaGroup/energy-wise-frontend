@@ -1,4 +1,4 @@
-/* Import Google Font */
+
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&display=swap');
 
 /* Root Variables */
@@ -161,21 +161,12 @@ p {
     bottom: 0px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding-bottom: 10px;
-    background-color: var(--primary-button);
+    margin-bottom: 2px;
 }
 
 .nav-bottom a:hover, a:active, a:link, a:visited{
     text-decoration: none;
     color: var(--light-text);
-}
-
-#buttons {
-    display:flex;
-    gap: 6vw;
-    justify-content: center;
-    margin-top: 10vh;
 }
 
 .nav-bottom a{
@@ -225,6 +216,11 @@ p {
         width: 70px;
         padding: 4px;
     }
+}
+
+.nav-bottom p {
+    color: white;
+    font-size: 1em;
 }
 
 .gauge-container {
